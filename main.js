@@ -20,14 +20,14 @@ recognition.onresult = function(event){
 
 function speak(){
     var synth = window.speechSynthesis;
-    speak_data = document.getElementById("texbox").value;
+    speak_data = document.getElementById("textbox").innerHTML;
     var utter_This = new SpeechSynthesisUtterance(speak_data);
     synth.speak(utter_This);
     Webcam.attach(camera);
 
 }
 
-camera = document.getElementById("camera").value;
+camera = document.getElementById("camera");
 Webcam.set({
     width:360,
     height:250,
